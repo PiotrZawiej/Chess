@@ -4,10 +4,11 @@ import "fmt"
 
 func gameRun() {
 	board := boardStructure{}
-
+		
 	run := true
 	for run {
-		board.dispalyBoard()
+		
+		board.displayBoard()
 
 		fmt.Println("Do you want to continue? (yes/no)")
 		var input string
@@ -18,4 +19,6 @@ func gameRun() {
 		}
 
 	}
+
+	
 }

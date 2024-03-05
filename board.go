@@ -13,11 +13,13 @@ func (b *boardStructure) drawBoard() [8][8]string {
 			b.board[raw][field] = "[]"
 			}
 		}
+	
+		b.addAllPawns()
 	return b.board
 }
 
 
-func (b *boardStructure) dispalyBoard() {
+func (b *boardStructure) displayBoard() {
 	for raws := range b.drawBoard() {
 		if raws == 0{
 			fmt.Println(" A B C D E F G H")
@@ -30,3 +32,5 @@ func (b *boardStructure) dispalyBoard() {
 		fmt.Println(raws + 1)
 	}
 }
+
+

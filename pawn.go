@@ -1,14 +1,16 @@
 package main
 
 type pawn struct{
-	mark rune
-	horizontalPlace int8 
-	verticalPlace int8
+	mark string
+	horizontalPlace int
+	verticalPlace int
 }
 
-func NewPawn() *pawn{
+func NewPawn(horizontalPlace int, verticalPLace int) *pawn{
 	p := new(pawn)
-	p.mark ='P'
-	
+	p.mark ="P "
+	p.horizontalPlace = horizontalPlace
+	p.verticalPlace = verticalPLace
+
 	return p
 }
