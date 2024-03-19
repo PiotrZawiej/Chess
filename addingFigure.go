@@ -18,3 +18,62 @@ func (b *boardStructure) addAllPawns() {
         b.addPawn(pawn)
     }
 }
+
+func (b *boardStructure) addRook(r * FS.Rook){
+    b.board[r.HorizontalPlace][r.VerticalPlace] = r.Mark
+}
+
+func (b * boardStructure) addAllRooks(){
+    rook1 := FS.NewRook(0,0)
+    b.addRook(rook1)
+
+    rook2 := FS.NewRook(0, len(b.board)-1)
+    b.addRook(rook2)
+
+    rook3 := FS.NewRook(len(b.board)-1, 0)
+    b.addRook(rook3)
+
+
+    rook4 := FS.NewRook(len(b.board)-1,len(b.board)-1)
+    b.addRook(rook4)
+
+}
+
+func (b *boardStructure) addKnight(k * FS.Knight){
+    b.board[k.HorizontalPlace][k.VerticalPlace] = k.Mark
+}
+
+func (b *boardStructure) addAllKnights(){
+    knight1 := FS.NewKnight(1,0)
+    b.addKnight(knight1)
+
+    knight2 := FS.NewKnight(1, len(b.board)-1)
+    b.addKnight(knight2)
+
+    knight3 := FS.NewKnight(len(b.board)-2, 0)
+    b.addKnight(knight3)
+
+
+    knight4 := FS.NewKnight(len(b.board)-2,len(b.board)-1)
+    b.addKnight(knight4)
+}
+
+func (b *boardStructure) addBishop(bi * FS.Bishop){
+    b.board[bi.HorizontalPlace][bi.VerticalPlace] = bi.Mark
+}
+
+func (b *boardStructure) addAllBishops(){
+    bishop1 := FS.NewBishop(2,0)
+    b.addBishop(bishop1)
+
+    bishop2 := FS.NewBishop(2, len(b.board)-1)
+    b.addBishop(bishop2)
+
+    bishop3 := FS.NewBishop(len(b.board)-3, 0)
+    b.addBishop(bishop3)
+
+    bishop4 := FS.NewBishop(len(b.board)-3, len(b.board)-1)
+    b.addBishop(bishop4)
+    
+    
+}

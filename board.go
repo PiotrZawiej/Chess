@@ -15,6 +15,9 @@ func (b *boardStructure) drawBoard() [8][8]string {
 		}
 	
 		b.addAllPawns()
+		b.addAllRooks()
+		b.addAllKnights()
+		b.addAllBishops()
 	return b.board
 }
 
