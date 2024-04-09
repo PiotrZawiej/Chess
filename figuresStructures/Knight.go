@@ -6,10 +6,10 @@ type Knight struct{
 	VerticalPlace int
 }
 
-func NewKnight(VP int, HP int) *Knight{
+func NewKnight(VP int, HP int, mark string) *Knight{
 	k := new(Knight)
 
-	k.Mark = "K "
+	k.Mark = mark
 	k.HorizontalPlace = HP
 	k.VerticalPlace = VP
 

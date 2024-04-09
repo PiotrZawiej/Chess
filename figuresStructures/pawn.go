@@ -7,9 +7,9 @@ type Pawn struct{
 	VerticalPlace int
 }
 
-func NewPawn(horizontalPlace int, verticalPLace int) *Pawn{
+func NewPawn(horizontalPlace int, verticalPLace int, mark string) *Pawn{
 	p := new(Pawn)
-	p.Mark ="P "
+	p.Mark = mark
 	p.HorizontalPlace = horizontalPlace
 	p.VerticalPlace = verticalPLace
 

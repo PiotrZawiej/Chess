@@ -6,9 +6,9 @@ type Rook struct {
 	VerticalPlace   int
 }
 
-func NewRook(HP int, VP int) *Rook {
+func NewRook(HP int, VP int, mark string) *Rook {
 	r := new(Rook)
-	r.Mark = "R "
+	r.Mark = mark
 	r.HorizontalPlace = HP
 	r.VerticalPlace = VP
 

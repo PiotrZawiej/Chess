@@ -7,10 +7,10 @@ type Bishop struct{
 }
 
 
-func NewBishop(VP int, HP int) *Bishop{
+func NewBishop(VP int, HP int, mark  string) *Bishop{
 	b := new(Bishop)
 
-	b.Mark = "B "
+	b.Mark = mark
 	b.HorizontalPlace = HP
 	b.VerticalPlace = VP
 
